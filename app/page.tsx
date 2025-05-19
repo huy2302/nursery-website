@@ -1,10 +1,8 @@
 import CurrentTime from './components/CurrentTime';
-import PostCard from './components/PostCard';
+import ListPosts from './components/ListPosts';
 import ScrollingText from './components/ScrollingText';
-import { getAllPosts } from './lib/postService';
 
 const Home = async () => {
-  const posts = await getAllPosts();
   
   return (
     <div className="p-8">
@@ -12,9 +10,12 @@ const Home = async () => {
       <div className="max-w-screen-lg mx-auto p-4">
         <CurrentTime />
         <ScrollingText />
-        {posts.map((post) => (
-          <PostCard key={post.id} postItem={post} />
-        ))}
+
+        {/* render list */}
+        <div className='pt-10'>
+          {/* <LeftMenu /> */}
+          <ListPosts />
+        </div>
       </div>
     </div>
   );

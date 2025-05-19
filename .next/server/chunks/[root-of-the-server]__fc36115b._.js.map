@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file:///home/bss/huydevtr/nursery-website/app/api/messages/route.ts"],"sourcesContent":["// app/api/messages/route.ts\nimport { NextResponse } from 'next/server';\n\nexport async function GET() {\n  const texts = [\n    '🎉 Chào mừng đến với trường mầm non Hoàng Liệt!',\n    '📢 Tuyển sinh năm học 2025 - 2026 đã bắt đầu!',\n    '🔔 Theo dõi fanpage để nhận thông tin mới nhất!',\n    '📞 Liên hệ: 02438616264 để được tư vấn.',\n  ];\n\n  return NextResponse.json(texts);\n}\n"],"names":[],"mappings":"AAAA,4BAA4B;;;;AAC5B;;AAEO,eAAe;IACpB,MAAM,QAAQ;QACZ;QACA;QACA;QACA;KACD;IAED,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;AAC3B","debugId":null}}]
+}

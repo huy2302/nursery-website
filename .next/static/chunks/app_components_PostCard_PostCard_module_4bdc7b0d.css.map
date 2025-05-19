@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///home/bss/huydevtr/nursery-website/app/components/PostCard/PostCard.module.css"],"sourcesContent":[".cardContainer {\n    min-width: 600px;\n}\n\n.leftContent {\n    width: 200px;\n    display: flex;\n    justify-content: center;\n}\n\n.leftContent img {\n    width: 100%;\n    height: auto;\n    object-fit: contain;\n}\n\n.rightContent {\n    padding: 10px;\n}\n\n.readMoreBtn {\n    margin: 0;\n    padding: 10px 10px 10px 0;\n}\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;;AAMA;;;;AAIA","debugId":null}}]
+}

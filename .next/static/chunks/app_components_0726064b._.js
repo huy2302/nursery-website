@@ -148,38 +148,58 @@ __turbopack_context__.s({
     "default": (()=>ScrollingText)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 'use client';
 ;
-const texts = [
-    '🎉 Chào mừng đến với trường mầm non Hoàng Liệt!',
-    '📢 Tuyển sinh năm học 2025 - 2026 đã bắt đầu!',
-    '🔔 Theo dõi fanpage để nhận thông tin mới nhất!',
-    '📞 Liên hệ: 02438616264 để được tư vấn.'
-];
 function ScrollingText() {
+    _s();
+    const [texts, setTexts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ScrollingText.useEffect": ()=>{
+            const fetchTexts = {
+                "ScrollingText.useEffect.fetchTexts": async ()=>{
+                    try {
+                        const res = await fetch('/api/messages');
+                        const data = await res.json();
+                        setTexts(data);
+                    } catch (err) {
+                        console.error('Failed to fetch messages', err);
+                    }
+                }
+            }["ScrollingText.useEffect.fetchTexts"];
+            fetchTexts();
+        }
+    }["ScrollingText.useEffect"], []);
+    if (texts.length === 0) return null; // or a loading spinner
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full overflow-hidden bg-yellow-100 py-2 border-y border-yellow-300",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "inline-block whitespace-nowrap animate-marquee text-yellow-800 font-medium text-sm",
-            children: texts.map((text, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "mx-10",
+            className: "whitespace-nowrap animate-marquee flex gap-20",
+            children: [
+                ...texts,
+                ...texts
+            ].map((text, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "text-sm font-medium text-yellow-800",
                     children: text
                 }, idx, false, {
                     fileName: "[project]/app/components/ScrollingText.tsx",
-                    lineNumber: 17,
+                    lineNumber: 28,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/app/components/ScrollingText.tsx",
-            lineNumber: 15,
+            lineNumber: 26,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/ScrollingText.tsx",
-        lineNumber: 14,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 }
+_s(ScrollingText, "PsTkS3oI37JabbNh0gpvNVK96jk=");
 _c = ScrollingText;
 var _c;
 __turbopack_context__.k.register(_c, "ScrollingText");

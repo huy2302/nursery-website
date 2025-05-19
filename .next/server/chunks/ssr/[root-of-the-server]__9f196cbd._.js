@@ -8420,7 +8420,7 @@ const Home = async ()=>{
                             postItem: post
                         }, post.id, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 16,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this))
                 ]
