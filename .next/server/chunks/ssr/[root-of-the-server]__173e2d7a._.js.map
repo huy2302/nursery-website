@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":["file:///home/bss/huydevtr/nursery-website/app/page.tsx"],"sourcesContent":["import { NextResponse } from 'next/server';\nimport { PrismaClient } from '@prisma/client';\n\nconst prisma = new PrismaClient();\n\nexport async function GET() {\n  const posts = await prisma.post.findMany();\n  return NextResponse.json(posts);\n}\n\nexport async function POST(request: Request) {\n  const { title, content } = await request.json();\n  const post = await prisma.post.create({\n    data: { title, content },\n  });\n  return NextResponse.json(post);\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEA,MAAM,SAAS,IAAI,6HAAA,CAAA,eAAY;AAExB,eAAe;IACpB,MAAM,QAAQ,MAAM,OAAO,IAAI,CAAC,QAAQ;IACxC,OAAO,8HAAA,CAAA,eAAY,CAAC,IAAI,CAAC;AAC3B;AAEO,eAAe,KAAK,OAAgB;IACzC,MAAM,EAAE,KAAK,EAAE,OAAO,EAAE,GAAG,MAAM,QAAQ,IAAI;IAC7C,MAAM,OAAO,MAAM,OAAO,IAAI,CAAC,MAAM,CAAC;QACpC,MAAM;YAAE;YAAO;QAAQ;IACzB;IACA,OAAO,8HAAA,CAAA,eAAY,CAAC,IAAI,CAAC;AAC3B","debugId":null}}]
+}

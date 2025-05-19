@@ -1,0 +1,17 @@
+-- CreateTable
+CREATE TABLE "Post" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "title" TEXT NOT NULL,
+    "content" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "Admission" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "parentName" TEXT NOT NULL,
+    "childName" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
+    "message" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

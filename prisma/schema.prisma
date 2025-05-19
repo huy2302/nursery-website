@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String   // HTML từ Quill
+  category    String   @default("Uncategorized") 
+  publishedAt DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt 
+}
+
+model Admission {
+  id        Int      @id @default(autoincrement())
+  parentName String
+  childName  String
+  phone      String
+  message    String?
+  createdAt  DateTime @default(now())
+}
